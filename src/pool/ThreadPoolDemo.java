@@ -10,9 +10,9 @@ public class ThreadPoolDemo implements Runnable{
 	public static void main(String[] args){
 		ThreadPoolDemo threadPoolDemo = new ThreadPoolDemo();
 		ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);      // 创建固定数量线程的线程池
-//		for (int i=0; i<10;i++) {
-//			fixedThreadPool.execute(threadPoolDemo);
-//		}
+		for (int i=0; i<10;i++) {
+			fixedThreadPool.execute(threadPoolDemo);
+		}
 		
 		ExecutorService singleThreadPool = Executors.newSingleThreadExecutor();     // 创建只有单个线程的线程池
 		
@@ -33,9 +33,9 @@ public class ThreadPoolDemo implements Runnable{
 		
 		// 根据任务的需要会不断创建线程，一旦之前创建的线程有空闲就会重新使用
 		ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
-		 for (int i=0; i<10;i++) {
-			 cachedThreadPool.execute(threadPoolDemo);
-		 }
+//		 for (int i=0; i<10;i++) {
+//			 cachedThreadPool.execute(threadPoolDemo);
+//		 }
 		
 		fixedThreadPool.shutdown();
 		singleThreadPool.shutdown();

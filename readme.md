@@ -39,5 +39,9 @@ CountDownLatch是一个同步工具类，它允许一个或多个线程一直等
  
  ## Lock
  
- ### ReadLock 和 WriteLock
- ### Reen
+ ### ReentrantLock（AQS）
+ 1. 如何实现锁的互斥性的？(CAS)
+ 2. 如何实现对竞争线程的阻塞和唤醒的？(LockSupport.park 和 unPark)
+ 3. 阻塞线程保存在哪里？(双向链表)
+ 
+ 
