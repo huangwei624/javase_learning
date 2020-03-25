@@ -21,6 +21,7 @@ import java.util.concurrent.Executors;
 class Foo {
 	private CountDownLatch c2;
 	private CountDownLatch c3;
+
 	public Foo() {
 		c2 = new CountDownLatch(1);
 		c3 = new CountDownLatch(1);
@@ -50,8 +51,8 @@ class Foo {
 
 public class ThreadTest {
 	
-	public static void main(String[] args){
-	
+	public static void main(String[] args) {
+
 	}
 	
 }

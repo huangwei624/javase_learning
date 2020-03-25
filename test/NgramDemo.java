@@ -10,34 +10,35 @@ import java.util.List;
 public class NgramDemo {
 	
 	static void ngram(List<String> seq, int N) {
-		for (int i=1;i<=N;i++){
-			int width=i;
+		for (int i = 1; i <= N; i++) {
+			int width = i;
 			StringBuffer sb = new StringBuffer();
 			sb.append("{");
-			for (int j=0; j<seq.size(); j++){
+			for (int j = 0; j < seq.size(); j++) {
 				int tempj = j;
-				if (width>1 && j+width<=seq.size()){
+				if (width > 1 && j + width <= seq.size()) {
 					sb.append("(");
 				}
-				for (int k = j; k < j+width && j+width<=seq.size(); k++) {
+				for (int k = j; k < j + width && j + width <= seq.size(); k++) {
 					sb.append(seq.get(k));
-					if(k<j+width-1){
+					if (k < j + width - 1) {
 						sb.append(", ");
 					}
 				}
-				j=tempj;
-				if (width>1 &&j+width<=seq.size()){
+				j = tempj;
+				if (width > 1 && j + width <= seq.size()) {
 					sb.append("),");
 				}
-				if (width==1){
+				if (width == 1) {
 					sb.append(", ");
 				}
 			}
 			sb.append("}");
-			System.out.println(sb.substring(0, sb.toString().length()-2)+"}");
+			System.out.println(sb.substring(0, sb.toString().length() - 2) + "}");
 		}
 	}
-	public static void main(String[] args){
+
+	public static void main(String[] args) {
 		ArrayList<String> strings = new ArrayList<>();
 		//n-gram models are widely used in natural language processing
 		strings.add("n-gram");

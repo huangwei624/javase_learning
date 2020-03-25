@@ -12,8 +12,8 @@ public class A {
 		System.out.println("non-static A");
 	}
 	
-	public static void main(String[] args){
-	    new A();
+	public static void main(String[] args) {
+		new A();
 	}
-
+	
 }
